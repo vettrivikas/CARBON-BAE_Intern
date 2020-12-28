@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+        <nav class="navbar navbar-expand-lg  navbar-light bg-light">
+            <a class="navbar-brand mb-0 h1" href="#">CARBON BAE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"><i class="fa fa-fw fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fab fa-facebook-messenger"></i>Link</a>
+                </li> 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-user"></i>
+                      Profile
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Profile</a>
+                      <a class="dropdown-item" href="#">Settings</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Switch Accounts</a>
+                    </div>
+                  </li>
+              </ul>
+              
+            </div>
+          </nav>
+            <br><br><br><br>
+          <div class="container">
+            <div class="wrapper fadeInDown">
+                <div id="formContent">
+                  <!-- Tabs Titles -->
+              
+                  <!-- Icon -->
+                  <div class="fadeIn first py">
+                    <img src="Icons/Login_icon_small.ico" class="log_icon " id="icon_lo" alt="User Icon" />
+                  </div>
+              
+                  <!-- Login Form -->
+                  <form>
+                    <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+                    <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+                    <input type="submit" class="fadeIn fourth" value="Log In">
+                  </form>
+                  
+                  <!-- Remind Passowrd -->
+                  <div id="formFooter">
+                    <a class="underlineHover" href="#">Forgot Password?</a><br>
+                    <a class="underlineHover" href="Sinup.html"> <b>SigUp</b></a>
+                  </div>
+              
+                </div>
+              </div>
+          </div>
+   
+</body>
+<script>
+    const $dropdown = $(".dropdown");
+const $dropdownToggle = $(".dropdown-toggle");
+const $dropdownMenu = $(".dropdown-menu");
+const showClass = "show";
+ 
+$(window).on("load resize", function() {
+  if (this.matchMedia("(min-width: 768px)").matches) {
+    $dropdown.hover(
+      function() {
+        const $this = $(this);
+        $this.addClass(showClass);
+        $this.find($dropdownToggle).attr("aria-expanded", "true");
+        $this.find($dropdownMenu).addClass(showClass);
+      },
+      function() {
+        const $this = $(this);
+        $this.removeClass(showClass);
+        $this.find($dropdownToggle).attr("aria-expanded", "false");
+        $this.find($dropdownMenu).removeClass(showClass);
+      }
+    );
+  } else {
+    $dropdown.off("mouseenter mouseleave");
+  }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+</html>
